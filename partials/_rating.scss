@@ -1,0 +1,16 @@
+@use "utils" as *;
+@use "variables" as *;
+
+.fieldset-rating {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.out-of-flow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}

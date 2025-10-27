@@ -1,9 +1,11 @@
 :root {
   --clr-primary: hsl(25, 97%, 53%);
-  --clr-white: hsl(0, 100%, 100%);
-  --clr-grey-1: hsl(217, 12%, 63%);
-  --clr-grey-2: hsl(213, 19%, 18%);
-  --clr-grey-3: hsl(216, 12%, 8%);
+  --clr-white: #ffffff;
+  --clr-grey-1: #959eac;
+  --clr-grey-2: #252d37;
+  --clr-grey-3: #121417;
+  --clr-grey-card-bottom: #171e28;
+  --clr-grey-card-top: #222933;
   --fs-default: 0.9375rem;
   --ff-main: "Overpass";
   --fw-normal: 400;
@@ -35,6 +37,10 @@
   --sp-10: 5rem;
   --sp-11: 6rem;
   --sp-12: 8rem;
+  --lh-1: 1;
+  --lh-2: 1.5;
+  --br-1: 20px;
+  --br-circle: 50%;
   --desktop-container-width: 37.5rem;
 }
 
@@ -78,6 +84,35 @@ select:active {
   outline: none;
 }
 
+fieldset {
+  border: none;
+}
+
+.hidden-right {
+  opacity: 0;
+  position: absolute;
+  background-color: pink;
+  top: 0;
+  left: 0;
+}
+
+.card {
+  max-width: 20.4375rem;
+  background: linear-gradient(to top, var(--clr-grey-card-bottom), var(--clr-grey-card-top));
+  padding: var(--sp-6);
+  border-radius: var(--br-1);
+}
+
+.title {
+  font-size: var(--fs-6);
+  line-height: var(--lh-2);
+}
+
+.description {
+  color: var(--clr-grey-1);
+  font-size: var(--fs-3);
+}
+
 body {
   font-family: var(--ff-main), sans-serif;
   font-size: var(--fs-default);
@@ -85,6 +120,46 @@ body {
   line-height: 1.5;
   color: var(--clr-white);
   background-color: var(--clr-grey-3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.page-rating {
+  position: relative;
+}
+
+.icon-container {
+  display: inline-block;
+  padding: var(--sp-4);
+  background-color: var(--clr-grey-2);
+  border-radius: var(--br-circle);
+  margin-block-end: var(--sp-3);
+}
+
+.card--rating .title {
+  margin-block-end: var(--sp-4);
+}
+.card--rating .description {
+  margin-block-end: var(--sp-4);
+}
+.card--rating .fieldset-rating {
+  margin-block-end: var(--sp-4);
+}
+
+.fieldset-rating {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.out-of-flow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

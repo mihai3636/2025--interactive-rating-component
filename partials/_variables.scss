@@ -3,10 +3,13 @@
 :root {
   --clr-primary: hsl(25, 97%, 53%);
 
-  --clr-white: hsl(0, 100%, 100%);
-  --clr-grey-1: hsl(217, 12%, 63%);
-  --clr-grey-2: hsl(213, 19%, 18%);
-  --clr-grey-3: hsl(216, 12%, 8%);
+  --clr-white: #ffffff;
+  --clr-grey-1: #959eac;
+  --clr-grey-2: #252d37;
+  --clr-grey-3: #121417;
+
+  --clr-grey-card-bottom: #171e28;
+  --clr-grey-card-top: #222933;
 
   --fs-default: #{toRem(15px)};
 
@@ -45,6 +48,14 @@
   --sp-10: #{toRem(80px)};
   --sp-11: #{toRem(96px)};
   --sp-12: #{toRem(128px)};
+
+  // Line heights
+  --lh-1: 1;
+  --lh-2: 1.5;
+
+  // Border radius
+  --br-1: 20px;
+  --br-circle: 50%;
 
   --desktop-container-width: #{toRem(600px)};
 }

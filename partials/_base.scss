@@ -9,4 +9,14 @@ body {
   color: var(--clr-white);
 
   background-color: var(--clr-grey-3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+.page-rating {
+  position: relative;
 }

@@ -1,0 +1,23 @@
+@use "utils" as *;
+@use "variables" as *;
+
+.icon-container {
+  display: inline-block;
+  padding: var(--sp-4);
+  background-color: var(--clr-grey-2);
+  border-radius: var(--br-circle);
+
+  margin-block-end: var(--sp-3);
+}
+
+.card--rating {
+  .title {
+    margin-block-end: var(--sp-4);
+  }
+  .description {
+    margin-block-end: var(--sp-4);
+  }
+  .fieldset-rating {
+    margin-block-end: var(--sp-4);
+  }
+}

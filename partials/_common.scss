@@ -1,0 +1,34 @@
+@use "utils" as *;
+@use "variables" as *;
+
+.hidden-right {
+  opacity: 0;
+  position: absolute;
+  background-color: pink;
+
+  top: 0;
+  left: 0;
+}
+
+.card {
+  // background-color: var(--clr-grey-2);
+  max-width: toRem(327px);
+  background: linear-gradient(
+    to top,
+    var(--clr-grey-card-bottom),
+    var(--clr-grey-card-top)
+  );
+
+  padding: var(--sp-6);
+  border-radius: var(--br-1);
+}
+
+.title {
+  font-size: var(--fs-6);
+  line-height: var(--lh-2);
+}
+
+.description {
+  color: var(--clr-grey-1);
+  font-size: var(--fs-3);
+}
