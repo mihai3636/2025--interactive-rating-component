@@ -1,0 +1,34 @@
+@use "utils" as *;
+@use "variables" as *;
+
+.card--thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .icon-thanks {
+    margin-block-end: var(--sp-6);
+  }
+
+  .selection-container {
+    margin-block-end: var(--sp-7);
+  }
+
+  .title {
+    margin-block-end: var(--sp-3);
+  }
+
+  .description {
+    text-align: center;
+    margin-block-end: var(--sp-3);
+  }
+}
+
+.selection-text {
+  color: var(--clr-primary);
+  line-height: var(--lh-1);
+  padding: var(--sp-5);
+  padding-block: var(--sp-4);
+  background-color: var(--clr-grey-2);
+  border-radius: var(--br-1);
+}
