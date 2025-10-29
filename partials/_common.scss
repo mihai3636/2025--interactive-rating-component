@@ -8,10 +8,19 @@
 
   top: 0;
   left: 0;
+
+  transform: translateX(100%);
+}
+
+.out-of-flow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .card {
-  // background-color: var(--clr-grey-2);
   max-width: toRem(327px);
   background: linear-gradient(
     to top,
@@ -20,15 +29,29 @@
   );
 
   padding: var(--sp-6);
+  padding-block-end: var(--sp-7);
   border-radius: var(--br-1);
 }
 
 .title {
-  font-size: var(--fs-6);
+  font-size: var(--fs-7);
   line-height: var(--lh-2);
 }
 
 .description {
   color: var(--clr-grey-1);
   font-size: var(--fs-3);
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: var(--sp-4);
+  border-radius: var(--br-1);
+  cursor: pointer;
+
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-4);
 }
