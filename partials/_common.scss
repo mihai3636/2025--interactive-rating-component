@@ -18,7 +18,7 @@
   grid-column: 1;
   grid-row: 1;
 
-  max-width: toRem(327px);
+  max-width: var(--maxw-card);
   background: linear-gradient(
     to top,
     var(--clr-grey-card-bottom),
@@ -28,16 +28,29 @@
   padding: var(--sp-6);
   padding-block-end: var(--sp-7);
   border-radius: var(--br-1);
+
+  @media (min-width: $bp-desktop) {
+    padding: var(--sp-7);
+    padding-block-end: var(--sp-8);
+  }
 }
 
 .title {
   font-size: var(--fs-7);
   line-height: var(--lh-2);
+
+  @media (min-width: $bp-desktop) {
+    font-size: var(--fs-8);
+  }
 }
 
 .description {
   color: var(--clr-grey-1);
   font-size: var(--fs-3);
+
+  @media (min-width: $bp-desktop) {
+    font-size: var(--fs-4);
+  }
 }
 
 .btn {

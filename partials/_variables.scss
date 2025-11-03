@@ -1,5 +1,7 @@
 @use "./utils" as *;
 
+$bp-desktop: #{toRem(600px)};
+
 :root {
   --clr-primary: hsl(25, 97%, 53%);
 
@@ -57,5 +59,9 @@
   --br-1: 20px;
   --br-circle: 100%;
 
-  --desktop-container-width: #{toRem(600px)};
+  // Max widths
+  --maxw-card: #{toRem(327px)};
+  @media (min-width: $bp-desktop) {
+    --maxw-card: #{toRem(412px)};
+  }
 }

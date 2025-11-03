@@ -31,4 +31,8 @@
   padding-block: var(--sp-4);
   background-color: var(--clr-grey-2);
   border-radius: var(--br-1);
+
+  @media (min-width: $bp-desktop) {
+    font-size: var(--fs-4);
+  }
 }

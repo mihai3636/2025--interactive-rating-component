@@ -33,6 +33,10 @@
     font-size: var(--fs-4);
     font-weight: var(--fw-bold);
     line-height: var(--lh-1);
+
+    @media (min-width: $bp-desktop) {
+      font-size: var(--fs-5);
+    }
   }
 }
 
