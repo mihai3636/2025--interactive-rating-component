@@ -19,4 +19,6 @@ body {
 
 .page-rating {
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
 }

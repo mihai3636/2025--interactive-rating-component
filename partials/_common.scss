@@ -2,13 +2,7 @@
 @use "variables" as *;
 
 .hidden-right {
-  opacity: 0.8;
-  position: absolute;
-  background-color: pink;
-
-  top: 0;
-  left: 0;
-
+  opacity: 0;
   transform: translateX(100%);
 }
 
@@ -21,6 +15,9 @@
 }
 
 .card {
+  grid-column: 1;
+  grid-row: 1;
+
   max-width: toRem(327px);
   background: linear-gradient(
     to top,
