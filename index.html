@@ -27,7 +27,12 @@
   </head>
   <body>
     <main class="page-rating">
-      <form target="#" id="formRating" class="card card--rating">
+      <form
+        target="#"
+        id="formRating"
+        class="card card--rating transition"
+        aria-hidden="false"
+      >
         <div class="icon-container">
           <img src="./images/icon-star.svg" alt="Orange star icon" />
         </div>
@@ -90,7 +95,10 @@
           Submit
         </button>
       </form>
-      <section class="card card--thanks hidden-right" aria-hidden="true">
+      <section
+        class="card card--thanks hidden-right transition"
+        aria-hidden="true"
+      >
         <img
           class="icon-thanks"
           src="./images/illustration-thank-you.svg"

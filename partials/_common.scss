@@ -6,6 +6,15 @@
   transform: translateX(100%);
 }
 
+.hidden-left {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.transition {
+  transition: transform 1s ease-in, opacity 1s ease-in;
+}
+
 .out-of-flow {
   position: absolute;
   top: 0;
