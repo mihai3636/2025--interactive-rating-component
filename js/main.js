@@ -1,26 +1,12 @@
 import { initBackNav, initHistory } from "./backManager.js";
 import { hideThanks, showThanks } from "./thanks.js";
-
-console.log("Hello world");
-
-const btnSubmitEl = document.getElementById("btnSubmit");
-const formEl = document.getElementById("formRating");
-const radioEls = document.querySelectorAll("input[type='radio']");
+import { showHome, hideHome, initBtnSubmit } from "./home.js";
 
 let uiState = { submitted: false };
 
 initHistory(uiState);
 initBackNav(handleBackPressed);
-
-btnSubmitEl.addEventListener("click", (ev) => {
-  ev.preventDefault();
-  if (!validateInput()) return;
-
-  uiState = { submitted: true };
-  history.pushState(uiState, null, "");
-
-  render(uiState);
-});
+initBtnSubmit(handleBtnSubmit);
 
 function render(state) {
   if (state.submitted) {
@@ -34,20 +20,13 @@ function render(state) {
   hideThanks();
 }
 
-function showHome() {
-  formEl.classList.remove("hidden-left");
-  formEl.setAttribute("aria-hidden", "false");
+function handleBtnSubmit() {
+  uiState = { submitted: true };
+  history.pushState(uiState, null, "");
+
+  render(uiState);
 }
 
 function handleBackPressed(state) {
   render(state);
-}
-
-function hideHome() {
-  formEl.classList.add("hidden-left");
-  formEl.setAttribute("aria-hidden", "true");
-}
-
-function validateInput() {
-  return Array.from(radioEls).some((radio) => radio.checked);
 }
