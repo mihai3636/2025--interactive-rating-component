@@ -1,6 +1,7 @@
 const sectionThanksEl = document.querySelector(".card--thanks");
 const selectionEl = document.querySelector(".selection-text > span");
 const radioEls = document.querySelectorAll("input[type='radio']");
+const selectionTextEl = document.querySelector(".selection-text");
 
 export function hideThanks() {
   sectionThanksEl.classList.add("hidden-right");
@@ -13,6 +14,12 @@ export function showThanks() {
 
   let selectedRating = getSelectedRating();
   selectionEl.textContent = selectedRating;
+
+  sectionThanksEl.addEventListener(
+    "transitionend",
+    () => selectionTextEl.focus(),
+    { once: true }
+  );
 }
 
 function getSelectedRating() {
