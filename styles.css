@@ -180,6 +180,7 @@ body {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
+  overflow: hidden;
 }
 
 .icon-container {
