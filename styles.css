@@ -161,6 +161,7 @@ fieldset {
   letter-spacing: 3px;
   font-weight: var(--fw-bold);
   font-size: var(--fs-4);
+  transition: background-color ease-in-out 0.3s;
 }
 
 body {
@@ -217,6 +218,7 @@ body {
   color: var(--clr-grey-1);
   background-color: var(--clr-grey-2);
   cursor: pointer;
+  transition: background-color ease-in-out 0.3s;
 }
 .radio-rating:hover {
   background-color: var(--clr-white);
